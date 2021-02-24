@@ -1,22 +1,31 @@
  
 
- confirm("Are You Age Between 18 And 80");
-var userName = prompt("Please Enter Your Name ");
-var age = prompt("Please Enter Your Age ");
-if(age>=18 && age <=80)
+var result =  confirm("Are You Ready to watch ?");
+
+if(result ==true)
 {
-    var movieName = prompt("What Movie You want To Watch");
-var FavColor = prompt("Enter Your Favorite Color");
-var element = document.getElementById('col').style.color = FavColor;
-var el = document.getElementById('col');
-el.innerText=("My Name Is : " + userName + "\n" +"My Age Is : " + age +"\n" +" Move Name :  "+ movieName);
-}
+var movieName = prompt("Enter your email to create or restart your membership.");
+
+var netCost = prompt("Choose the plan that's right for you\n 1 Year for 100$ or 2 years for 250$ enter cost that's you want ")
+
+alert(costTax( netCost*.14));
+ }
 else 
+
 {
-    alert("You Not Allowed To Enter This Page");
+
+    var el = document.getElementById('col');
+    el.innerText=('Unfortunately, visit us soon')
 }
 
     
  
 
 
+function costTax (cost)
+{
+
+    var tax = cost*0.16;
+     var totalPrice = tax+cost;
+return totalPrice;
+}
